@@ -10,11 +10,29 @@
 
 <body>
     <script>
-        for (let n = 0; n <= 0; n = +prompt("Введите количество чисел")) {
-            const element = array[n];
+        // for (var n = 0; n <= 0;) {
+        //     n = +prompt("Введите количество чисел");
+        //     if (n <= 0) { alert("Введите положительное число") }
+        //     //            else { break }
+        // }
+        // document.write("Число " + n + "<br>")
 
+        do {
+            var a = +prompt("Введите число")
         }
-        var n = +prompt("Введите количество чисел")
+        //if 
+        while (isNaN(a) || a <= 0)
+        //  {
+        //     a = +prompt("Значение не является положительным числом\nВведите положительное число")
+        // }
+        var sum = 0;
+        //        else {
+        for (let i = 0; i <= a; i++) {
+            document.write(i + " + " + sum);
+            sum = sum + i;
+            document.write(" = " + sum + "<br>");
+        }
+//        }
     </script>
 </body>
 

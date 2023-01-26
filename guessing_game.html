@@ -14,7 +14,7 @@
         var attempts = 7
         for (let userattempts = 0; userattempts < attempts; userattempts++) {
             do (useranswer = +prompt("У вас " + (attempts - userattempts) + " попыток\nВведите число от 0 до 100"))
-            while (isNaN(useranswer) || (useranswer <= 0 || useranswer > 100))
+            while (isNaN(useranswer) || (useranswer < 0 || useranswer > 100))
             if (useranswer == answer) {
                 /*document.write*/alert("Вы угадали " + answer);
                 break;

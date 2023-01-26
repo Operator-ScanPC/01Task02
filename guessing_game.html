@@ -11,12 +11,19 @@
 <body>
     <script>
         var answer = (Math.random() * 100).toFixed()
-        var useranswer = +prompt("Введите число от 0 до 100")
-        if (useranswer == answer) { document.write("Вы угадали\n") }
-        else if (useranswer < answer) { document.write("Больше\n") }
-        else if (useranswer > answer) { document.write("Меньше\n") }
+        var attempts = 7
+        for (let userattempts = 0; userattempts < attempts; userattempts++) {
+            do (useranswer = +prompt("У вас " + (attempts - userattempts) + " попыток\nВведите число от 0 до 100"))
+            while (isNaN(useranswer) || (useranswer <= 0 || useranswer > 100))
+            if (useranswer == answer) {
+                /*document.write*/alert("Вы угадали " + answer);
+                break;
+            }
+            else if (useranswer < answer) { /*document.write*/alert("Больше " + useranswer) }
+            else if (useranswer > answer) {/*document.write*/alert("Меньше " + useranswer) }
+        }
 
-        document.write(answer)
+        document.write("Загаданное число было " + answer)
     </script>
 </body>
 

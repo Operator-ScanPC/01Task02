@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игра угадай число</title>
+</head>
+
+<body>
+
+    <script>
+        //сделать игру для двух игроков, с бесконечным количеством попыток и окончанием по требованию.
+        var answer = (Math.random() * 100).toFixed()
+        var attempts = 3
+        for (var userattempts = 0; userattempts < attempts; userattempts++) {
+            do (useranswer1 = prompt("Пользователь 1\nУ вас " + (attempts - userattempts) + " попыток\nВведите число от 0 до 100"))
+            //проверить есть ли стоп, преобразовать в число
+            while (isNaN(useranswer1) || (useranswer1 < 0 || useranswer1 > 100))
+            if (useranswer1 == answer) {
+                /*document.write*/alert("Пользователь 1\nВы угадали " + answer);
+                break;
+            }
+            else if (useranswer1 < answer) { /*document.write*/alert("Больше " + useranswer1) }
+            else if (useranswer1 > answer) {/*document.write*/alert("Меньше " + useranswer1) }
+
+            // for (var userattempts = 0; userattempts < attempts; userattempts++) {
+            do (useranswer2 = +prompt("Пользователь 2\nУ вас " + (attempts - userattempts) + " попыток\nВведите число от 0 до 100"))
+            while (isNaN(useranswer2) || (useranswer2 < 0 || useranswer2 > 100))
+            if (useranswer2 == answer) {
+                /*document.write*/alert("Пользователь 2\nВы угадали " + answer);
+                break;
+            }
+            else if (useranswer2 < answer) { /*document.write*/alert("Больше " + useranswer2) }
+            else if (useranswer2 > answer) {/*document.write*/alert("Меньше " + useranswer2) }
+        }
+        if (userattempts == attempts)
+            alert("Вы проиграли!")
+
+
+        document.write("Загаданное число было " + answer)
+    </script>
+</body>
+
+</html>

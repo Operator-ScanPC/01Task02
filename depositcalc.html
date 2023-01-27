@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deposit Calculator</title>
+</head>
+
+<body>
+    <script>
+        //пользователь вводит сумму вклада и процент который будет начисляться ежегодно, программа расчитает размер вклада на 5 лет
+        var deposit
+        var rate
+        do (deposit = +prompt("Введите сумму вклада"))
+        while (deposit <= 0 || isNaN(deposit))
+        do (rate = +prompt("Введите Процентную ставку"))
+        while (rate <= 0 || isNaN(rate) || rate > 100)
+        var term = 5
+        document.write("Процентная ставка " + rate + " %<br>")
+        for (let index = 0; index <= term; index++) {
+            var yar = index
+            if (yar == 0) { yar = "начало " }
+            else { yar = yar + " год " }
+            document.write("На " + yar + "сумма вклада составит " + deposit.toFixed(2) + "<br>");
+            deposit = deposit / 100 * rate + deposit
+        }
+    </script>
+</body>
+
+</html>

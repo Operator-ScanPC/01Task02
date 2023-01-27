@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riddles</title>
+</head>
+
+<body>
+    <script>
+        //Загадать загадку, сообщить правильный ответ, добавить еще 2 загадки
+        var right = 0
+        var useranswer = prompt("Вот с иголками клубок\nПодкатился на порог\nГлаза - бусинки глядят\nМолочка они хотят\n").toLowerCase()
+        if (useranswer != "ежик" && useranswer != "ёжик" && useranswer != "еж" && useranswer != "ёж") {//ответ на загадку 1
+            alert("НЕ правильно :(\nЭто " + "Ёжик")
+        }
+        else {
+            alert("Вы молодец " + useranswer[0].toUpperCase() + useranswer.substring(1) + " Это правильный ответ!")
+            right++
+        }
+        useranswer = prompt("Шубка серая для лета,\nДля зимы — другого цвета.").toLowerCase()
+        if (useranswer != "зайчик" && useranswer != "заяц" && useranswer != "зайка") {//ответ на загадку 1
+            alert("Не правильно :(\nЭто Заяц")
+        }
+        else {
+            alert("Вы Молодец! " + useranswer[0].toUpperCase() + useranswer.substring(1) + " Это правильный ответ!")
+            right++
+        }
+        useranswer = prompt("Рыжая плутовка,\nхитрая да ловкая,\nв сарай попала,\nкур пересчитала.").toLowerCase()
+        if (useranswer != "лиса" && useranswer != "лисичка" && useranswer != "лисица") {//ответ на загадку 1
+            alert("Не правильно :(\nЭто Лиса")
+        }
+        else {
+            alert("Вы Молодец! " + useranswer[0].toUpperCase() + useranswer.substring(1) + " Это правильный ответ!")
+            right++
+        }
+        document.write("правильных ответов " + right)
+    </script>
+
+</body>
+
+</html>
